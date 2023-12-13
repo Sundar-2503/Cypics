@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="672dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".register_complaint">
+
+        <TextView
+            android:id="@+id/Incident"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Incident Occured In"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Time"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="44dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Time"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Incident"
+            app:layout_constraintTop_toBottomOf="@+id/Incident" />
+
+        <TextView
+            android:id="@+id/Category"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Category"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Time"
+            app:layout_constraintTop_toBottomOf="@+id/Time" />
+
+        <Spinner
+            android:id="@+id/Categoryspinner"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:autofillHints="Type"
+            app:layout_constraintBottom_toBottomOf="@+id/Category"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toEndOf="@+id/Category"
+            app:layout_constraintTop_toTopOf="@+id/Category"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/sub_Categoryspinner"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:autofillHints="Type"
+            app:layout_constraintBottom_toBottomOf="@+id/Sub_Categoryview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.624"
+            app:layout_constraintStart_toEndOf="@+id/Sub_Categoryview"
+            app:layout_constraintTop_toTopOf="@+id/Sub_Categoryview"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/Sub_Categoryview"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Sub Category"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Category"
+            app:layout_constraintTop_toBottomOf="@+id/Category" />
+
+        <TextView
+            android:id="@+id/Additional_Infoview"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="48dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Additional Info"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Reporting_Delayview"
+            app:layout_constraintTop_toBottomOf="@+id/Reporting_Delayview" />
+
+
+        <TextView
+            android:id="@+id/scenario"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Situation"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Additional_Infoview"
+            app:layout_constraintTop_toBottomOf="@+id/Additional_Infoview" />
+
+        <TextView
+            android:id="@+id/predictionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="API Response:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/scenario"
+            app:layout_constraintTop_toBottomOf="@+id/scenario" />
+
+        <TextView
+            android:id="@+id/prediction1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Prediction 1:"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/predictionTextView"
+            app:layout_constraintTop_toBottomOf="@+id/predictionTextView" />
+
+
+        <TextView
+            android:id="@+id/prediction2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Prediction 2:"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/prediction1TextView"
+            app:layout_constraintTop_toBottomOf="@+id/prediction1TextView" />
+
+        <TextView
+            android:id="@+id/ensemblePredictionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Ensemble Prediction:"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/prediction2TextView"
+            app:layout_constraintTop_toBottomOf="@+id/prediction2TextView" />
+
+        <TextView
+            android:id="@+id/Reporting_Delayview"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Reporting Delay"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Date"
+            app:layout_constraintTop_toBottomOf="@+id/Date" />
+
+
+        <EditText
+            android:id="@+id/Incident_Occured_In"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:width="170dp"
+            android:ems="10"
+            android:hint="Enter here"
+            android:inputType="textPersonName"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@+id/Incident"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Incident"
+            app:layout_constraintTop_toTopOf="@+id/Incident" />
+
+        <EditText
+            android:id="@+id/editTime"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:width="170dp"
+            android:ems="10"
+            android:hint="Enter here"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="time|number"
+            app:layout_constraintBottom_toBottomOf="@+id/Time"
+            app:layout_constraintStart_toStartOf="@+id/Incident_Occured_In"
+            app:layout_constraintTop_toTopOf="@+id/Time" />
+
+        <EditText
+            android:id="@+id/Additional_Info"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Enter here"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="@+id/Additional_Infoview"
+            app:layout_constraintStart_toStartOf="@+id/Repoting_Delay"
+            app:layout_constraintTop_toTopOf="@+id/Additional_Infoview"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/scenerio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Enter your scenario "
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="@+id/scenario"
+            app:layout_constraintStart_toStartOf="@+id/Repoting_Delay"
+            app:layout_constraintTop_toTopOf="@+id/scenario"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/serverStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Status"
+            android:visibility="invisible"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/Additional_Infoview"
+            app:layout_constraintTop_toBottomOf="@+id/Additional_Infoview" />
+
+        <TextView
+            android:id="@+id/prediction1ResultTextView"
+            android:layout_width="158dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:text="N/A"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/prediction1TextView"
+            app:layout_constraintStart_toStartOf="@+id/Repoting_Delay"
+            app:layout_constraintTop_toTopOf="@+id/prediction1TextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/prediction2ResultTextView"
+            android:layout_width="158dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:text="N/A"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/prediction2TextView"
+            app:layout_constraintStart_toStartOf="@+id/Repoting_Delay"
+            app:layout_constraintTop_toTopOf="@+id/prediction2TextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/ensemblePredictionResultTextView"
+            android:layout_width="158dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:width="170dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:text="N/A"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ensemblePredictionTextView"
+            app:layout_constraintStart_toStartOf="@+id/Repoting_Delay"
+            app:layout_constraintTop_toTopOf="@+id/ensemblePredictionTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <EditText
+            android:id="@+id/Repoting_Delay"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:width="170dp"
+            android:ems="10"
+            android:hint="Hours"
+            android:includeFontPadding="true"
+            android:inputType="textMultiLine"
+            android:textAlignment="gravity"
+            app:layout_constraintBottom_toBottomOf="@+id/Reporting_Delayview"
+            app:layout_constraintStart_toStartOf="@+id/dateformatID"
+            app:layout_constraintTop_toTopOf="@+id/Reporting_Delayview" />
+
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Date"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/Sub_Categoryview"
+            app:layout_constraintTop_toBottomOf="@+id/Sub_Categoryview"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/dateformatID"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:width="170dp"
+            android:ems="10"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="Select Date"
+            android:inputType="date"
+            app:layout_constraintBottom_toBottomOf="@+id/Date"
+            app:layout_constraintStart_toStartOf="@+id/sub_Categoryspinner"
+            app:layout_constraintTop_toTopOf="@+id/Date"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/Submit"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="124dp"
+            android:background="@drawable/round_button"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ensemblePredictionTextView" />
+
+        <Button
+            android:id="@+id/onpresspredict"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="124dp"
+            android:background="@drawable/round_button"
+            android:text="predict"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prediction1TextView" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Submit" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.432" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
